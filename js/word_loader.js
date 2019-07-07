@@ -28,7 +28,7 @@ button.addEventListener("click", function(){
                 console.log("POS");
             }
             else{
-                var tmpStr = gMeaningArr[i];
+                var tmpStr = gMeaningArr[i]+"<br>";
             }
             innerStr += tmpStr;
         }
