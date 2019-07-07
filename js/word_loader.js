@@ -22,16 +22,18 @@ button.addEventListener("click", function(){
         var gLen = Object.keys(randomJsonObject.g_meaning).length;
         var innerStr = randomJsonObject.meaning;
         for(i=0;i<gLen;i++){
-            if(gMeaningArr[i].split(" ").length<1){
-                var tmpStr = "</p><p><strong>" + gMeaningArr[i] + "</strong>";
+            var cStr = gMeaningArr[i];
+            if(gMeaningArr[i].split(" ").length == 1){
+                var tmpStr = "</p><p><strong>" + gMeaningArr[i] + ":</strong><br>";
+                console.log("POS");
             }
             else{
-                var tmpStr = "</p><p>" + gMeaningArr[i];
+                var tmpStr = gMeaningArr[i];
             }
             innerStr += tmpStr;
         }
         meaningHTML.innerHTML = innerStr
-        console.log(source);
+        //console.log(lengthList);
     };
     req.send(null);
 });
